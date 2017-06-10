@@ -1,4 +1,4 @@
-package pirmaPaskaita;
+package src.pirmaPaskaita;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;

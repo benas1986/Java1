@@ -32,6 +32,8 @@ public class Person {
         this.age = age;
     }
     // tam kad atspausdintu alt insert toString
+
+
     @Override
     public String toString() {
         return "Person{" +

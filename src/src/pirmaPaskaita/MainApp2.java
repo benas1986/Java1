@@ -1,4 +1,4 @@
-package pirmaPaskaita;
+package src.pirmaPaskaita;
 
 import java.util.Scanner;
 
@@ -11,10 +11,10 @@ public class MainApp2 {
         Scanner sc = new Scanner(System.in);
         String word = null;
 
-    do {
-       System.out.println("Iveskite zodi");
-       word = sc.nextLine();
-    }while(!word.equals("pabaiga"));
+        do {
+            System.out.println("Iveskite zodi");
+            word = sc.nextLine();
+        }while(!word.equals("pabaiga"));
 
     }
 }
