@@ -1,5 +1,7 @@
 package ketvirtaPaskaita;
 
+import java.util.Comparator;
+
 /**
  * Created by Lina on 2017.06.09.
  */
@@ -67,8 +69,7 @@ public class Vartotojas implements Comparable<Vartotojas> {
 
         if (amzius != that.amzius) return false;
         if (vardas != null ? !vardas.equals(that.vardas) : that.vardas != null) return false;
-        if (pavarde != null ? !pavarde.equals(that.pavarde) : that.pavarde != null) return false;
-        return miestas != null ? miestas.equals(that.miestas) : that.miestas == null;
+        return (pavarde != null ? pavarde.equals(that.pavarde) : that.pavarde == null) && (miestas != null ? miestas.equals(that.miestas) : that.miestas == null);
     }
 
     @Override
@@ -84,4 +85,20 @@ public class Vartotojas implements Comparable<Vartotojas> {
     public int compareTo(Vartotojas o) {
         return pavarde.compareTo(o.getPavarde());
     }
+
+    public static Comparator<Vartotojas> sortByVardas = new Comparator<Vartotojas>() {
+        @Override
+        public int compare(Vartotojas o1, Vartotojas o2) {
+            return o1.getVardas().compareTo(o2.getVardas());
+        }
+    };
+
+    public static Comparator<Vartotojas> sortByPavarde = new Comparator<Vartotojas>() {
+        @Override
+        public int compare(Vartotojas o1, Vartotojas o2) {
+            return o1.getPavarde().compareTo(o2.getPavarde());
+        }
+    };
+
 }
+

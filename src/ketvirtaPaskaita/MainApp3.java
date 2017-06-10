@@ -1,6 +1,10 @@
 package ketvirtaPaskaita;
 
+import treciaPaskaita.Person;
+
 import java.util.*;
+
+import static java.util.Collections.*;
 
 /**
  * Created by Lina on 2017.06.09.
@@ -10,10 +14,27 @@ public class MainApp3 {
 
         ArrayList<Vartotojas> vartotojai = kolekcija();
 
-        Collections.sort(vartotojai); // vartotojai
-        for(Vartotojas vartotojas : vartotojai){
-            System.out.println(vartotojas);
+ /*
+       //anonimine klase
+       Collections.sort(persons, new Comparator<Person>() {
+            @Override
+            public int compare(Person o1, Person o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });*/
+
+
+        Collections.sort(vartotojai, Vartotojas.sortByVardas);
+        for (Vartotojas p : vartotojai){
+            System.out.println(p);
         }
+        System.out.println();
+
+        Collections.sort(vartotojai, Vartotojas.sortByPavarde);
+        for (Vartotojas p : vartotojai) {
+            System.out.println(p);
+        }
+        System.out.println();
     }
 
     private static ArrayList<Vartotojas> kolekcija(){

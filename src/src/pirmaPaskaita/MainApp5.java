@@ -12,13 +12,13 @@ public class MainApp5 {
         Scanner sc = new Scanner(System.in);
         // int number = sc.nextInt();
         int suma = 0;
-        for (int i = 0; i<5; i++){
+        for (int i = 0; i < 5; i++) {
             System.out.println("Iveskite žodį:");
             masyvas[i] = sc.nextLine();
 
         }
-     //adsgda   System.out.println("Skaiciu suma: " + suma);
-        for(String m : masyvas){
+        //adsgda   System.out.println("Skaiciu suma: " + suma);
+        for (String m : masyvas) {
             System.out.println(m);
         }
     }
