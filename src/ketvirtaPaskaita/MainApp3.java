@@ -30,11 +30,6 @@ public class MainApp3 {
         }
         System.out.println();
 
-        Collections.sort(vartotojai, Vartotojas.sortByPavarde);
-        for (Vartotojas p : vartotojai) {
-            System.out.println(p);
-        }
-        System.out.println();
     }
 
     private static ArrayList<Vartotojas> kolekcija(){

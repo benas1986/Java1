@@ -72,10 +72,10 @@ public class Cat implements Comparable<Cat>{
         return result;
     }
 
+
     @Override
     public int compareTo(Cat o) {
-
-        return name.compareTo(o.getName());
+        return name.compareTo(getName());
     }
 }
 

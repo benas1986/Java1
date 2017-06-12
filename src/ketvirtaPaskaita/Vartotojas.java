@@ -1,5 +1,7 @@
 package ketvirtaPaskaita;
 
+import jdk.nashorn.internal.runtime.NumberToString;
+
 import java.util.Comparator;
 
 /**
@@ -17,6 +19,16 @@ public class Vartotojas implements Comparable<Vartotojas> {
         this.amzius = amzius;
         this.miestas = miestas;
     }
+
+    public static  Comparator<Vartotojas> sortByVardas = new Comparator<Vartotojas>(){
+
+        @Override
+        public int compare(Vartotojas o1, Vartotojas o2) {
+
+            return   o1.getVardas().compareTo(o2.getVardas());   }
+    };
+
+
 
     public String getVardas() {
         return vardas;
@@ -86,19 +98,6 @@ public class Vartotojas implements Comparable<Vartotojas> {
         return pavarde.compareTo(o.getPavarde());
     }
 
-    public static Comparator<Vartotojas> sortByVardas = new Comparator<Vartotojas>() {
-        @Override
-        public int compare(Vartotojas o1, Vartotojas o2) {
-            return o1.getVardas().compareTo(o2.getVardas());
-        }
-    };
-
-    public static Comparator<Vartotojas> sortByPavarde = new Comparator<Vartotojas>() {
-        @Override
-        public int compare(Vartotojas o1, Vartotojas o2) {
-            return o1.getPavarde().compareTo(o2.getPavarde());
-        }
-    };
 
 }
 
